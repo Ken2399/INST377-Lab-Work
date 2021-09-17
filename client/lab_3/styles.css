@@ -3,6 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+.top-bar {
+    color: black;
+    background-color: rgba(0,139, 139,0.8);
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+  }
   
 .menu-container {
     color: #fff;
@@ -49,54 +57,54 @@
     justify-content: center;
   }
   
-  .photo-grid {
+.photo-grid {
     width: 900px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: row-reverse;
     align-items: center;
-  }
+}
   
-  .photo-grid-item {
+.photo-grid-item {
     border: 1px solid #fff;
     width: 300px;
     height: 300px;
-  }
+}
 
-  .first-item {
+.first-item {
       order: 1;
-  }
+}
 
-  .last-item {
+.last-item {
       order: -1;
-  }
+}
 
-  .social,
-  .subscribe {
+.github,
+.project {
     align-self: flex-end;
     margin-bottom: 20px;
-  }
+}
 
-  .signup {
+.signup {
     margin-left: auto;
-  }
+}
 
-  .footer {
+.footer {
     display: flex;
     justify-content: space-between;
-  }
+}
   
-  .footer-item {
+.footer-item {
     border: 1px solid #fff;
     background-color: #D6E9FE;
     height: 200px;
     flex: 1;
-  }
+}
 
-  .footer-three {
+.footer-three {
     flex: 2;
-  }
+}
 
 .footer-one,
 .footer-three {
