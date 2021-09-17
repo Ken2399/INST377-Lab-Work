@@ -27,13 +27,7 @@
     justify-content: space-between;
 }
 
-.links {
-    border: 1px solid #fff;
-    display: flex;
-    justify-content: flex-end;
-}
-
-.login {
+.main-page {
     margin-left: 20px;
 }
 
@@ -86,7 +80,7 @@
     margin-bottom: 20px;
 }
 
-.signup {
+.database {
     margin-left: auto;
 }
 
