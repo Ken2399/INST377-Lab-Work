@@ -54,6 +54,9 @@ document.addEventListener('DOMContentLoaded' , () => {
             obstacle.style.left = obstacleLeft + 'px'
             topObstacle.style.left = obstacleLeft + 'px'
 
+            if (score >= 2) {
+                document.getElementById("wr").innerHTML = "World record!";
+            }
             if (obstacleLeft === -60) {
                 clearInterval(timerId)
                 gameDisplay.removeChild(obstacle)

@@ -123,3 +123,9 @@ body {
       top: 50px;
       left: 150px;
   }
+
+  .world-record-message {
+    position: absolute;
+    top: 70px;
+    left: 150px;
+  }
