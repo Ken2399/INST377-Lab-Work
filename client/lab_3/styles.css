@@ -11,6 +11,15 @@
     display: flex;
     justify-content: flex-start;
   }
+
+.lab {
+    font-weight: bold;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+}
   
 .menu-container {
     color: #fff;
