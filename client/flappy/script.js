@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     let gravity = 1
     let isGameOver = false
     let gap = 430
-
+    let score = 0
 
     function startGame() {
         birdBottom -= gravity
@@ -58,6 +58,9 @@ document.addEventListener('DOMContentLoaded' , () => {
                 gameDisplay.removeChild(obstacle)
                 gameDisplay.removeChild(topObstacle)
             }
+            if (obstacleLeft < 200) {
+                score += 1
+            }
             if (
                 obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
                 (birdBottom < obstacleBottom + 153 || birdBottom > obstacleBottom + gap -200)||
@@ -73,6 +76,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
     generateObstacle()
 
+    document.getElementById("score").innerHTML = score;
 
     function gameOver() {
         clearInterval(gameTimerId)

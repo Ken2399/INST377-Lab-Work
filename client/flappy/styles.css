@@ -112,3 +112,14 @@ body {
     z-index: +1;
   }
 
+  .message {
+      position: absolute;
+      top: 750px;
+      left: 200px;
+  }
+
+  .score {
+      position: absolute;
+      top: 50px;
+      left: 150px;
+  }
