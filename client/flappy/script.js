@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded' , () => {
 
 
     function generateObstacle() {
+        document.getElementById("score").innerHTML = "Score: " + score;
         let obstacleLeft = 500
         let randomHeight = Math.random() * 60
         let obstacleBottom = randomHeight
@@ -58,8 +59,9 @@ document.addEventListener('DOMContentLoaded' , () => {
                 gameDisplay.removeChild(obstacle)
                 gameDisplay.removeChild(topObstacle)
             }
-            if (obstacleLeft < 200) {
+            if (obstacleLeft === 200) {
                 score += 1
+                document.getElementById("score").innerHTML = "Score: " + score;
             }
             if (
                 obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
@@ -75,8 +77,6 @@ document.addEventListener('DOMContentLoaded' , () => {
 
     }
     generateObstacle()
-
-    document.getElementById("score").innerHTML = score;
 
     function gameOver() {
         clearInterval(gameTimerId)
