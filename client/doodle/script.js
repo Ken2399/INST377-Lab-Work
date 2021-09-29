@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
           } else {
             doodlerLeftSpace = 356
           }
-      },20)
+      },15)
     }
   
     function moveRight() {
@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             doodlerLeftSpace = -43
         }
-      },20)
+      },15)
     }
     
     function moveStraight() {
