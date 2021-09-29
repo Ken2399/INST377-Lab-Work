@@ -123,12 +123,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       isGoingLeft = true
       leftTimerId = setInterval(function () {
-          if (doodlerLeftSpace >= 0) {
-            console.log('going left')
+          if (doodlerLeftSpace > -43) {
             doodlerLeftSpace -=1
-             doodler.style.left = doodlerLeftSpace + 'px'
-          } else doodlerLeftSpace = 313
-      },10)
+            doodler.style.left = doodlerLeftSpace + 'px'
+          } else {
+            doodlerLeftSpace = 356
+          }
+      },20)
     }
   
     function moveRight() {
@@ -138,14 +139,14 @@ document.addEventListener('DOMContentLoaded', () => {
       }
       isGoingRight = true
       rightTimerId = setInterval(function () {
-        if (doodlerLeftSpace <= 313) {
+        if (doodlerLeftSpace < 356) {
           console.log('going right')
-          doodlerLeftSpace +=2
+          doodlerLeftSpace += 2
           doodler.style.left = doodlerLeftSpace + 'px'
         } else {
-            doodlerLeftSpace = 0
+            doodlerLeftSpace = -43
         }
-      },10)
+      },20)
     }
     
     function moveStraight() {
