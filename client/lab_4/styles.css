@@ -59,8 +59,8 @@
     overflow: hidden;
     max-width: 600px;
     position: relative;
-    align-self: center;
-  }
+    left: 30%;
+}
   
 .photo-grid-container .carousel_item,
 .photo-grid-container .carousel_item--hidden {
