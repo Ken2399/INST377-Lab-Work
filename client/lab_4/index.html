@@ -1,19 +1,54 @@
-YOUR NAME Lab 4: HTML Forms
-
-today's date
-Database Demos
-Main Page
-
-Group Project Link (no site yet)
-Awesome Logo
-Github Link
-
-image_1
-image_2
-image_3
-image_4
-image_5
-
-footer item 1
-footer item 2
-footer item 3
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8'/>
+    <title>Iskander Lou's Lab 4</title>
+    <link rel='stylesheet' href='styles.css'/>
+  </head>
+  <body>
+    <div class='top-bar'>
+      <p class='lab'>Iskander Lou's Lab 4: Click to Move</p>
+    </div>
+    <div class='menu-container'>
+      <div class='menu'>
+        <div class='date'>Oct 19, 2021</div>
+        <div class='database'><a href="data.html" class='link'>Database Demos</a></div>
+        <div class='main-page'>Main Page</div>
+      </div>
+    </div>
+    <div class='header-container'>
+        <div class='header'>
+          <div class='project'><a href="https://www.youtube.com/watch?v=HUgMWJKn2YY&ab_channel=Lucky_Wolf" style="text-decoration:none">Group Project Link (no site yet)</a></div>
+          <div class='logo'><img src='images/awesome-logo.svg'/></div>
+          <div class='github'><a href="https://github.com/Ken2399/INST377-Lab-Work" style="text-decoration:none">My Github</a></div>
+        </div>
+    </div>
+    <div class='photo-grid-container'>
+        <div class='carousel_item carousel_item--visible'>
+            <img src='images/one.svg'/>
+        </div>
+        <div class='carousel_item'>
+            <img src='images/two.svg'/>
+        </div>
+        <div class='carousel_item'>
+            <img src='images/three.svg'/>
+        </div>
+        <div class='carousel_item'>
+            <img src='images/four.svg'/>
+        </div>
+        <div class='carousel_item'>
+            <img src='images/five.svg'/>
+        </div>
+        <div class='carousel_actions'>
+            <button id='carousel_button--prev' aria-label='Previous slide'>Prev</button>
+            <button id='carousel_button--next' aria-label='Next slide'>Next</button>
+        </div>
+    </div>
+    <div class='footer'>
+        <div class='footer-item footer-one'>footer item 1</div>
+        <div class='footer-item footer-two'>footer item 2</div>
+        <div class='footer-item footer-three'>footer item 3</div>
+    </div>
+    <script src='script.js'></script>
+  </body>
+</html>
