@@ -22,13 +22,16 @@ async function windowActions() {
       const zipcode = place.zip.replace(regex, `<span class="h2">${place.zip}</span>`);
       return `
           <li>
-            <div class="name">${place.name}</div></li>
+            <div class="name">${place.name}</div>
             <div class="address">Address: ${place.address_line_1}</div>
             <div class="city">City: ${place.city}</div>
             <div class="zipcode">Zipcode: ${place.zip}</div>
           </li>
           <br>
             `;
+      // Replacing place.name with restaurantName causes a weird bug where
+      // restaurant names repeat a bunch of times.
+      // The same thing happens if you replace place.zip with zipcode.
     }).join('');
     suggestions.innerHTML = html;
   }
@@ -38,5 +41,8 @@ async function windowActions() {
     displayMatches(evt);
   });
 }
+
+// I also couldn't figure out how to make the list of results disappear after
+// clearing the search field.
 
 window.onload = windowActions;
