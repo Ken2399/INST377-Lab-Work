@@ -3,7 +3,7 @@ async function windowActions() {
   const searchInput = document.querySelector('.search');
   const suggestions = document.querySelector('.suggestions');
 
-  const mymap = L.map('mapid').setView([38.99, 76.94], 11);
+  const mymap = L.map('mapid').setView([38.99, -76.94], 11);
 
   L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
     attribution:
