@@ -22,12 +22,16 @@ async function windowActions() {
   }
 
   function displayMatches(event) {
-    const matchArray = findMatches(event.target.value, restaurants);
-    const html = matchArray.map((place) => {
-      const regex = new RegExp(event.target.value, 'gi');
-      const restaurantName = place.name.replace(regex, `<span class="h2">${place.name}</span>`);
-      const zipcode = place.zip.replace(regex, `<span class="h2">${place.zip}</span>`);
-      return `
+    if (event.target.value === '') {
+      suggestions.innerHTML = '<div></div>';
+      markers.map((mark) => mymap.removeLayer(mark));
+    } else {
+      const matchArray = findMatches(event.target.value, restaurants);
+      const html = matchArray.map((place) => {
+        const regex = new RegExp(event.target.value, 'gi');
+        const restaurantName = place.name.replace(regex, `<span class="h2">${place.name}</span>`);
+        const zipcode = place.zip.replace(regex, `<span class="h2">${place.zip}</span>`);
+        return `
             <li>
               <div class="name">${place.name}</div>
               <div class="address">Address: ${place.address_line_1}</div>
@@ -39,8 +43,9 @@ async function windowActions() {
       // Replacing place.name with restaurantName causes a weird bug where
       // restaurant names repeat a bunch of times.
       // The same thing happens if you replace place.zip with zipcode.
-    }).join('');
-    suggestions.innerHTML = html;
+      }).join('');
+      suggestions.innerHTML = html;
+    }
   }
 
   function removeMarkers(newmap) {
