@@ -3,7 +3,7 @@ async function windowActions() {
   const searchInput = document.querySelector('.search');
   const suggestions = document.querySelector('.suggestions');
 
-  const mymap = L.map('mapid').setView([100, -100], 10);
+  const mymap = L.map('mapid').setView([38, -75], 12);
 
   L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
     attribution:
